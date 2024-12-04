@@ -230,11 +230,57 @@ button.next-btn {
         footer a:hover {
             color: #ffe082;
         }
+        .visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.header h1 {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5em;
+    color: #333;
+    margin-top: 20px;
+}
+.santa-hat {
+    position: absolute;
+    top: 19px;  /* Малко нагоре от текста */
+    left: 390px; /* Разстояние вляво от началото на текста */
+    width: 37px; /* Размер на шапката */
+    height: 40px; /* Размер на шапката */
+    background-image: url('santa-hat.png'); /* Път към картинката на шапката */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1; /* Уверяваме се, че шапката ще е на преден план */
+    transform: rotate(-31deg); /* Ротация наляво */
+}
+
+.header h1 {
+    position: relative;  /* Създава контекст за абсолютно позициониране на шапката */
+    font-size: 2.5em;
+    color: #333;
+    margin-top: 20px;
+}
+
+
+
     </style>
 </head>
 <body>
     <header>
-        <h1>Облачни Технологии</h1>
+        <h1>
+            <span class="santa-hat"></span>
+            Облачни Технологии
+        </h1>
         <nav>
             <ul>
                 <li><a href="origin.html">Възникване</a></li>
