@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>История на Компютърните Технологии</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Компютърни Технологии</title>
     <style>
        .book {
     width: 60%;
@@ -271,18 +270,18 @@ body {
     color: #333;
     margin-top: 20px;
 }
+
     </style>
 </head>
 <body>
     <header>
-        <header>
-            <h1>
-                <span class="santa-hat"></span>
-                История на Компютърни Технологии
-            </h1>
+        <h1>
+            <span class="santa-hat"></span>
+            Компютърни Технологии
+        </h1>
         <nav>
             <ul>
-                <li><a href="index.html">Начало</a></li>
+                <li><a href="history.html">История</a></li>
                 <li><a href="types.html">Видове</a></li>
                 <li><a href="future.html">Бъдеще</a></li>
             </ul>
@@ -291,16 +290,20 @@ body {
 
     <main>
         <div class="section">
-            <h2>Ранни технологии</h2>
-            <p>Компютърните технологии започват своето развитие още през 19-ти век с устройства като аналитичната машина на Чарлз Бабидж.</p>
+            <h2>Какво са компютърните технологии?</h2>
+            <p>Компютърните технологии представляват комбинация от хардуер и софтуер, която трансформира начина, по който работим, комуникираме и творим.</p>
         </div>
         <div class="section">
-            <h2>Ера на персоналните компютри</h2>
-            <p>През 80-те години персоналните компютри започват да навлизат в домовете, променяйки завинаги ежедневието на хората.</p>
+            <h2>Приложения</h2>
+            <ul>
+                <li>Създаване на софтуер и приложения</li>
+                <li>Развитие на изкуствения интелект</li>
+                <li>Подобряване на комуникациите</li>
+            </ul>
         </div>
         <div class="section">
-            <h2>Съвременно развитие</h2>
-            <p>Днес компютърните технологии се използват в почти всяка сфера на живота, включително здравеопазване, образование и развлечения.</p>
+            <h2>Важни термини</h2>
+            <p>Технологични области като програмиране, машинно обучение и роботика са ключови за бъдещето на компютърните технологии.</p>
         </div>
     </main>
 
@@ -308,5 +311,31 @@ body {
         <p>&copy; 2024 Теодор Филипов - Компютърни Технологии</p>
         <p>Свържете се с нас: <a href="mailto:teodorfilipov369@gmail.com">teodorfilipov369@gmail.com</a></p>
     </footer>
+    <script>
+                 <div id="fallingElements"></div>
+    function createFallingElement() {
+       const element = document.createElement("div");
+       element.innerText = "❄️";
+       element.style.position = "fixed";
+       element.style.left = Math.random() * window.innerWidth + "px";
+       element.style.top = "-50px";
+       element.style.fontSize = Math.random() * 20 + 10 + "px";
+       element.style.animation = "fall " + (Math.random() * 3 + 2) + "s linear infinite";
+       document.getElementById("fallingElements").appendChild(element);
+ 
+       // Премахва снежинката, когато падне извън екрана
+       setTimeout(() => element.remove(), 5000);
+    }
+
+        function goToPage(pageNumber) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach((page) => {
+        page.classList.add('hidden'); // Скриваме всички страници
+    });
+    const currentPage = document.getElementById(page-${pageNumber});
+    currentPage.classList.remove('hidden'); // Показваме избраната страница
+}
+
+    </script>
 </body>
 </html>

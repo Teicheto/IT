@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>История на Компютърните Технологии</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Видове Компютърни Технологии</title>
     <style>
        .book {
     width: 60%;
@@ -254,7 +253,7 @@ body {
 .santa-hat {
     position: absolute;
     top: 19px;  /* Малко нагоре от текста */
-    left: 340px; /* Разстояние вляво от началото на текста */
+    left: 250px; /* Разстояние вляво от началото на текста */
     width: 37px; /* Размер на шапката */
     height: 40px; /* Размер на шапката */
     background-image: url('santa-hat.png'); /* Път към картинката на шапката */
@@ -271,18 +270,18 @@ body {
     color: #333;
     margin-top: 20px;
 }
+
     </style>
 </head>
 <body>
     <header>
-        <header>
-            <h1>
-                <span class="santa-hat"></span>
-                История на Компютърни Технологии
-            </h1>
+        <h1>
+            <span class="santa-hat"></span>
+            Видове Компютърни Технологии
+        </h1>
         <nav>
             <ul>
-                <li><a href="index.html">Начало</a></li>
+                <li><a href="history.html">История</a></li>
                 <li><a href="types.html">Видове</a></li>
                 <li><a href="future.html">Бъдеще</a></li>
             </ul>
@@ -291,16 +290,16 @@ body {
 
     <main>
         <div class="section">
-            <h2>Ранни технологии</h2>
-            <p>Компютърните технологии започват своето развитие още през 19-ти век с устройства като аналитичната машина на Чарлз Бабидж.</p>
+            <h2>Хардуер</h2>
+            <p>Хардуерът е физическата част на компютърните технологии, включваща процесори, памет, графични карти и други устройства.</p>
         </div>
         <div class="section">
-            <h2>Ера на персоналните компютри</h2>
-            <p>През 80-те години персоналните компютри започват да навлизат в домовете, променяйки завинаги ежедневието на хората.</p>
+            <h2>Софтуер</h2>
+            <p>Софтуерът управлява хардуера и осигурява функционалност. Той включва операционни системи, приложения и игри.</p>
         </div>
         <div class="section">
-            <h2>Съвременно развитие</h2>
-            <p>Днес компютърните технологии се използват в почти всяка сфера на живота, включително здравеопазване, образование и развлечения.</p>
+            <h2>Мрежови технологии</h2>
+            <p>Мрежите свързват устройства, позволявайки споделяне на ресурси и данни. Интернет е най-голямата мрежа в света.</p>
         </div>
     </main>
 
@@ -308,5 +307,31 @@ body {
         <p>&copy; 2024 Теодор Филипов - Компютърни Технологии</p>
         <p>Свържете се с нас: <a href="mailto:teodorfilipov369@gmail.com">teodorfilipov369@gmail.com</a></p>
     </footer>
+    <script>
+                 <div id="fallingElements"></div>
+    function createFallingElement() {
+       const element = document.createElement("div");
+       element.innerText = "❄️";
+       element.style.position = "fixed";
+       element.style.left = Math.random() * window.innerWidth + "px";
+       element.style.top = "-50px";
+       element.style.fontSize = Math.random() * 20 + 10 + "px";
+       element.style.animation = "fall " + (Math.random() * 3 + 2) + "s linear infinite";
+       document.getElementById("fallingElements").appendChild(element);
+ 
+       // Премахва снежинката, когато падне извън екрана
+       setTimeout(() => element.remove(), 5000);
+    }
+
+        function goToPage(pageNumber) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach((page) => {
+        page.classList.add('hidden'); // Скриваме всички страници
+    });
+    const currentPage = document.getElementById(page-${pageNumber});
+    currentPage.classList.remove('hidden'); // Показваме избраната страница
+}
+
+    </script>
 </body>
 </html>
